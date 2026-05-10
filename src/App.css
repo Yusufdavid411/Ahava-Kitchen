@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #4b004b;
+  --purple-dark: #350035;
+  --gold: #c8961d;
+  --gold-light: #fff2c7;
+  --cream: #fff8ee;
+  --white: #ffffff;
+  --text: #3b003b;
+  --muted: #765776;
+  --green: #25d366;
+  --gray: #c9c9c9;
+  --shadow: 0 14px 35px rgba(75, 0, 75, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(200, 150, 29, 0.18), transparent 32%),
+    linear-gradient(180deg, #fff7ec 0%, #ffffff 100%);
+  color: var(--text);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 18px;
+}
+
+.hero {
+  max-width: 760px;
+  margin: 0 auto 16px;
+  padding: 22px 10px 12px;
+  text-align: center;
+}
+
+.logo {
+  width: 135px;
+  height: 135px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 8px;
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  margin: 12px 0 4px;
+  font-size: 36px;
+  line-height: 1.1;
+  color: var(--purple);
+}
+
+.hero p {
+  margin: 0;
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.menu-box {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.today-banner {
+  background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+  color: var(--white);
+  border-radius: 24px;
+  padding: 17px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+}
+
+.today-banner span {
+  display: block;
+  font-size: 14px;
+  opacity: 0.88;
+  margin-bottom: 4px;
+}
+
+.today-banner strong {
+  display: block;
+  font-size: 23px;
+}
+
+.today-banner small {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.card,
+.closed-card {
+  background: var(--white);
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card-header h2,
+.closed-card h2 {
+  margin: 0;
+  font-size: 28px;
+  color: var(--purple);
+}
+
+.card-header p,
+.closed-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.notice {
+  background: var(--gold-light);
+  color: #5a4000;
+  padding: 14px 16px;
+  border-radius: 18px;
+  margin: 18px 0 4px;
+  font-weight: 800;
+}
+
+.order-section {
+  margin-top: 20px;
+}
+
+.choice-card {
+  width: 100%;
+  border: 2px solid rgba(200, 150, 29, 0.45);
+  background: var(--cream);
+  color: var(--text);
+  border-radius: 24px;
+  padding: 19px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.choice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(75, 0, 75, 0.12);
+}
+
+.choice-card.selected {
+  background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+  color: var(--white);
+  border-color: var(--purple);
+}
+
+.choice-label {
+  display: inline-block;
+  background: var(--gold-light);
+  color: var(--purple);
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.choice-card strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.35;
+  margin-bottom: 7px;
+}
+
+.choice-card small {
+  display: block;
+  font-weight: 800;
+  opacity: 0.82;
+}
+
+.sub-options {
+  background: #fbf4ff;
+  border: 1px solid rgba(75, 0, 75, 0.08);
+  border-radius: 22px;
+  padding: 17px;
+  margin-top: 14px;
+}
+
+.sub-options h3 {
+  margin: 8px 0 11px;
+  font-size: 17px;
+  color: var(--purple);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.grid button {
+  border: 2px solid rgba(200, 150, 29, 0.5);
+  background: var(--white);
+  color: var(--purple);
+  padding: 12px 15px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.grid button:hover {
+  transform: translateY(-1px);
+}
+
+.grid button.selected {
+  background: var(--purple);
+  color: var(--white);
+  border-color: var(--purple);
+}
+
+.divider {
+  text-align: center;
+  margin: 23px 0 4px;
+  color: var(--gold);
+  font-weight: 1000;
+  letter-spacing: 1px;
+}
+
+.price-note {
+  margin: 15px 0 0;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.summary {
+  background: #fff8df;
+  border: 1.5px dashed var(--gold);
+  border-radius: 20px;
+  padding: 16px;
+  margin-top: 23px;
+}
+
+.summary span {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.summary strong {
+  display: block;
+  color: var(--purple);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.order-btn {
+  width: 100%;
+  border: none;
+  background: var(--green);
+  color: var(--white);
+  padding: 17px;
+  border-radius: 20px;
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 1000;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.24);
+}
+
+.order-btn.disabled {
+  background: var(--gray);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.closed-card {
+  text-align: center;
+}
+
+.closed-tag {
+  display: inline-block;
+  background: var(--gold-light);
+  color: var(--purple);
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.closed-card button {
+  border: none;
+  background: var(--purple);
+  color: var(--white);
+  margin-top: 18px;
+  padding: 15px 20px;
+  border-radius: 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.footer {
+  max-width: 760px;
+  margin: 35px auto 8px;
+  background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+  color: var(--white);
+  padding: 25px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.footer-brand h3 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.footer-brand p {
+  margin: 6px 0 0;
+  opacity: 0.9;
+}
+
+.footer-socials {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-socials a {
+  background: var(--white);
+  color: var(--purple);
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.78;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 14px;
+  }
+
+  .logo {
+    width: 112px;
+    height: 112px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .today-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+  }
+
+  .card,
+  .closed-card {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .card-header h2,
+  .closed-card h2 {
+    font-size: 25px;
+  }
+
+  .choice-card {
+    padding: 16px;
+  }
+
+  .choice-card strong {
+    font-size: 18px;
+  }
+
+  .grid button {
+    width: 100%;
+  }
+}
